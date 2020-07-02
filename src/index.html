@@ -10,7 +10,7 @@
       <h4>Please input your location to search for stolen bikes in your area</h4>
       <form class="location">
         <div class="form-row">
-          <div class="col-7">
+          <div class="col-6">
             <input type="text" class="form-control" id="city" placeholder="City" required>
           </div>
           <div class="col">
@@ -20,10 +20,13 @@
             <input type="text" class="form-control" id="zip" placeholder="Zip(Optional)">
           </div>
         </div>
+        <div class="form-group">
+          <h5>Number of days back to search</h5>
+          <input type="number" class="form-control" id="days" placeholder="Days" min="1" required>
+        </div>
         <button type="submit" class="btn btn-dark">Submit</button>
       </form>
-      <div class="output">
-
+      <div class="output flexbox-row">
       </div>
     </div>
   </body>
