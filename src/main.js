@@ -25,18 +25,20 @@ $(document).ready(function() {
     }
 
     getStolenBikes(address).then((data) => {
+      let bikeElements = "";
       data.bikes.forEach(function(element){
         if(element.date_stolen > pastWeek(days) && element.thumb) {
-          $(".output").append(`<div class="flexbox">
+          bikeElements +=`<div class="flexbox">
           <p>${element.title}</p>
           <img src="${element.thumb}">
           <p>Frame colors: ${element.frame_colors.join(", ")}</p>
           <p>Serial: ${element.serial}</p>
           <p>URL for bike owner: <a href="${element.url}">Link</a></p>
           <p>Stolen Location: ${element.stolen_location}</p>
-          </div>`);
+          </div>`;
         }
       });
+      $(".output").html(bikeElements);
     });
 
     $("#city").val("");
