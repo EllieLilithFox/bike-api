@@ -2,9 +2,29 @@
 <html>
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <title>Blank</title>
+    <title>Stolen Bikes</title>
   </head>
   <body>
-    <h1 class="jumbotron">Jumbo</h1>
+    <div class="container">
+      <h1 class="jumbotron">Stolen Bikes</h1>
+      <h4>Please input your location to search for stolen bikes in your area</h4>
+      <form class="location">
+        <div class="form-row">
+          <div class="col-7">
+            <input type="text" class="form-control" placeholder="City" required>
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="State" required>
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Zip(Optional)">
+          </div>
+        </div>
+        <button type="submit" class="btn btn-dark">Submit</button>
+      </form>
+      <div class="output">
+
+      </div>
+    </div>
   </body>
 </html>
